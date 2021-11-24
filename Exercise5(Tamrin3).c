@@ -32,25 +32,25 @@ int main() {
             case (1):
                 printf("(1)Area of a parallelogram\n\n");
                 A = b * h;
-                printf("\n%d\n",A);
+                printf("\nFinial Result : %d\n",A);
 
                 break;
             case (2):
                 printf("(2)Area of a triangle\n\n");
                 A = b * h / 2;
-                printf("\n%d\n",A);
+                printf("\nFinial Result : %d\n",A);
                 break;
 
             case (3):
                 printf("(3)Area of a trapezoid \n\n");
                 A = a + b / 2 * h;
-                printf("\n%d\n",A);
+                printf("\nFinial Result : %d\n",A);
                 break;
 
             case (4):
                 printf("(4)Area of a circle\n\n");
                 A = 3.14 * (r * r) ;
-                printf("\n%d\n",A);
+                printf("\nFinial Result : %d\n",A);
                 break;
 
             case (5):
