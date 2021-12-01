@@ -4,31 +4,31 @@ int all_votes(int[5] , int[5], int[5], int[5]);
 int sorter(int[5]);
 float winer_checker(int x[5],int x2);
 int main() {
-int i  ;
+    int i  ;
 
     char ch='%';
-int candidate_A[5] ,
-    candidate_B[5],
-    candidate_C[5],candidate_D[5];
-printf("Enter the Candidate A votes in 5 area >> \n");
+    int candidate_A[5] ,
+            candidate_B[5],
+            candidate_C[5],candidate_D[5];
+    printf("Enter the Candidate A votes in 5 area = \n");
     for(i = 0; i < 5; i++) {
 
         printf("area  %d :  ", i);
         scanf("%d", &candidate_A[i]);
     }
-    printf("Enter the Candidate B votes in 5 area >> \n");
+    printf("Enter the Candidate B votes in 5 area = \n");
     for(i = 0; i < 5; i++) {
 
         printf("area  %d :  ", i);
         scanf("%d", &candidate_B[i]);
     }
-    printf("Enter the Candidate C votes in 5 area >> \n");
+    printf("Enter the Candidate C votes in 5 area = \n");
     for(i = 0; i < 5; i++) {
 
         printf("area  %d :  ", i);
         scanf("%d", &candidate_C[i]);
     }
-    printf("Enter the Candidate D votes in 5 area >> \n");
+    printf("Enter the Candidate D votes in 5 area = \n");
     for(i = 0; i < 5; i++) {
 
         printf("area  %d :  ", i);
@@ -36,8 +36,8 @@ printf("Enter the Candidate A votes in 5 area >> \n");
     }
 
     printf("\n\nHint : Area 0 is the capital\n");
-   all_votes(candidate_A,candidate_B,candidate_C,candidate_D);
-     int x3=all_votes(candidate_A,candidate_B,candidate_C,candidate_D) ;
+    all_votes(candidate_A,candidate_B,candidate_C,candidate_D);
+    int x3=all_votes(candidate_A,candidate_B,candidate_C,candidate_D) ;
     printf("\nCandidate A votes: in 5 area    \n");
     sorter(candidate_A);
     printf("The sum of votes for candidate A  is : %d\n",votes_Counter(candidate_A));
@@ -51,7 +51,7 @@ printf("Enter the Candidate A votes in 5 area >> \n");
     printf("\n_\n");
     printf("\nCandidate C votes: in 5 area    \n");
     sorter(candidate_C);
-    printf("The sum of votes for candidate C  is : %d\n",votes_Counter(candidate_C)); 
+    printf("The sum of votes for candidate C  is : %d\n",votes_Counter(candidate_C));
     printf("The candidate C have : %f %c of all votes \n",winer_checker(candidate_C,x3),ch);
     printf("\n_\n");
     printf("\nCandidate D votes: in 5 area    \n");
@@ -108,7 +108,7 @@ int sorter(int number[5]){
     for (i=0; i<n; ++i){
 
         printf("the area %d\t",i); printf (":%d\n",number[i]);
-}
+    }
 }
 float winer_checker(int x[5],int x3 ){
     float percentage;
