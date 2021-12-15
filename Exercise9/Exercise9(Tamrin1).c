@@ -4,17 +4,17 @@
 #include <windows.h>
 #define Max_size_string 20
 #define Max_num_string 3
- struct date_t{
+struct date_t{
     int production_date,purchase_date;
 };
- struct tank_t{
+struct tank_t{
     double Fuel_tank_flow,Fuel_tank_capacity;
 };
- struct auto_t{
+struct auto_t{
     char Company[Max_size_string];
-     struct tank_t tank1;
-     struct date_t date1;
- };
+    struct tank_t tank1;
+    struct date_t date1;
+};
 struct auto_t  auto1;
 void func_scan_company( );
 void func_scan_tank();
@@ -26,52 +26,52 @@ void func_export_txt();
 
 int main() {
     char sw;
-func_scan_company();
-func_scan_date();
-func_scan_tank();
+    func_scan_company();
+    func_scan_date();
+    func_scan_tank();
     do {
-printf(" See Result in Console ['C'] \n");
-printf("See Result as export to text file ['E']\n");
-printf(">>");scanf("  %c",&sw);
-    switch (sw) {
-        case 'c':
+        printf(" See Result in Console ['C'] \n");
+        printf("See Result as export to text file ['E']\n");
+        printf("=");scanf("  %c",&sw);
+        switch (sw) {
+            case 'c':
             case 'C':
-            func_print_company();
-            func_print_date();
-            func_print_tank();
-            sw='c';
+                func_print_company();
+                func_print_date();
+                func_print_tank();
+                sw='c';
                 break;
-        case 'E':
+            case 'E':
             case 'e':
                 func_export_txt();
                 sw='c';
                 break;
-        default:
-            printf("Invalid Input \n");
-            printf("Please Select your chose from option \n");
-            break;
+            default:
+                printf("Invalid Input \n");
+                printf("Please Select your chose from option \n");
+                break;
 
-    }}while (sw !='c');
+        }}while (sw !='c');
     return 0;
 }
 void func_scan_company( ){
-    printf("Enter the company name and model :   (like  mazda rx8 ) \n");
-    printf(">>");gets(auto1.Company);
+    printf("Enter the company name and model :\n");
+    printf("=");gets(auto1.Company);
 }
 void func_scan_tank(){
     printf("Enter the flow : \n");
-    printf(">>");scanf("%lf",&auto1.tank1.Fuel_tank_flow);
+    printf("=");scanf("%lf",&auto1.tank1.Fuel_tank_flow);
     printf("_______________________________________________\n");
     printf("Enter the Capacity : \n");
-    printf(">>");scanf("%lf",&auto1.tank1.Fuel_tank_capacity);
+    printf("=");scanf("%lf",&auto1.tank1.Fuel_tank_capacity);
     printf("________________________________________________\n");
 }
 void func_scan_date( ){
     printf("Enter The date production : \n");
-    printf(">>");scanf("%d",&auto1.date1.production_date);
+    printf("=");scanf("%d",&auto1.date1.production_date);
     printf("_____________________________________________________\n");
     printf("Enter the date purchase : \n");
-    printf(">>");scanf("%d",&auto1.date1.purchase_date);
+    printf("=");scanf("%d",&auto1.date1.purchase_date);
     printf("_____________________________________________________\n");
 
 }
